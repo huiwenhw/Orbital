@@ -1,0 +1,987 @@
+<!DOCTYPE html> 
+<html> 
+<head>
+	
+	<title> Cafe website </title>
+
+	<link href="http://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet" type="text/css"> </link>
+	<link href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/bootstrap.css" rel="stylesheet"> </link>
+
+	<script type="text/javascript" src="js/jquery-1.11.1.js"> </script>
+	<script type="text/javascript" language="JavaScript" src="js/find5.js">	</script>
+	<script type="text/javascript"> 
+	$(document).ready(function(){
+		alert("Welcome to our website! Feel free to browse around :):)");
+	});
+	</script>
+
+	<style type="text/css">
+
+	body{
+		background-color: #FFFFFF;
+		font-family: 'Josefin Sans', Helvetica, Arial, sans-serif;
+		font-style: bold; 
+	}
+
+	.go-to-top {
+		position: fixed;
+		right: 0px;
+		bottom: 0px;
+		background-color: #ffffff;
+	}
+
+	.nav .container{
+		margin: 10px auto;
+		width: 100%;
+	}
+
+	.nav {
+		background-color: #63B8FF;
+		height: 100%;
+		width: 100%;
+	}
+
+	.nav a {
+		color: white;
+		font-size: 20px;
+		font-weight: bold;
+		padding: 10px;
+		text-transform: uppercase;
+		text-decoration: none;
+	}
+
+	.nav ul {
+		float: right;
+	}
+
+	.nav li {
+		display: inline; 
+	}
+
+	.nav a:hover {
+		color: #a1d4ff;
+	}
+
+	.about {
+		background-color: #FFFFFF;
+		margin-top: 10px;
+		margin-bottom: 50px;
+	}
+
+	.about h1 {
+		color: black;
+		font-size: 40px;  
+		font-weight: bold;
+		text-align: center;
+	}
+
+	.about p {
+		color: black;
+		font-size: 25px;  
+		text-align: center;
+	}
+
+	.jm-item {
+		padding: 10px;
+		display: inline-block;
+		text-align: left;
+	}
+	.jm-item-wrapper {
+		position: relative;
+		padding: 7px;
+		background: ;
+	}
+	.jm-item-image {
+		position: relative;
+		overflow: hidden;
+		
+	}
+	.jm-item-image img {
+		display: block;
+		
+	}
+	.jm-item-title {
+		position: absolute;
+		left: -10px;
+		bottom: 17px;
+		background:  ;
+		line-height: 1.5em;
+		font-weight: normal;
+		padding: 7px 9px 6px;
+		text-transform: uppercase;
+		font-family: 'Oswald', sans-serif;
+		color: #FFFFFF;
+		font-size: 1.4em;
+	}
+	.jm-item-overlay {
+		background: #000;
+		opacity: 0;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		-webkit-transition: opacity 0.5s ease-in 0s;
+		-moz-transition: opacity 0.5s ease-in 0s;
+		-o-transition: opacity 0.5s ease-in 0s;
+		transition: opacity 0.5s ease-in 0s;
+	}
+	.jm-item-wrapper:hover .jm-item-overlay {
+		opacity: 0.3;
+	}
+	
+	.jm-item-button {
+		height: 50px;
+		width: 200px;
+		text-align: left;
+		position: absolute;
+		left: 20%;
+		
+	}
+	.jm-item-button a {
+		border-radius: 0%;
+		-webkit-border-radius: 50%;
+		background: ;
+		text-transform: uppercase;
+		
+		color: #FFFFFF;
+		font-size: 2em;
+		line-height: 50px;
+		-webkit-transition: all 0.2s ease-in 0s;
+		-moz-transition: all 0.2s ease-in 0s;
+		-o-transition: all 0.2s ease-in 0s;
+		transition: all 0.2s ease-in 0s;
+		text-decoration: none !important;
+		display: block;
+	}
+	.jm-item-button a:hover {
+		background: ;	
+	}
+	.first .jm-item-button {
+		-webkit-transition: all 0.3s ease-in 0.3s;
+		-moz-transition: all 0.3s ease-in 0.3s;
+		-o-transition: all 0.3s ease-in 0.3s;
+		transition: all 0.3s ease-in 0.3s;
+		top: -50px;	
+	}
+	.first .jm-item-wrapper:hover .jm-item-button {
+		top: 35%;	
+	}
+
+	.location {
+		background-color: #AB82FF;
+		height: 800px;
+		max-width: 100%;
+	}
+
+	.location h1 {
+		color: white;
+		font-size: 40px; 
+		text-align: center;
+	}
+
+	.location p {
+		color: white;
+		font-size: 25px;  
+		text-align: center;
+	}
+
+	.location .button{
+		color: black;
+		font-size: 15px;  
+		text-align: center;
+	}
+	.google-map {
+		background-color: #AB82FF;
+	}
+
+	.google-map h1 {
+		color: white;
+		font-size: 40px; 
+		text-align: center;
+	}
+
+	.google-map p {
+		color: white;
+		font-size: 25px;  
+		text-align: center;
+	}
+
+	.map {
+		background-color: #FFFFFF;
+		height: 150px; 
+	}
+
+	.map h1 {
+		color: black;
+		font-size: 40px; 
+		text-align: center;
+	}
+
+	.map p {
+		color: black;
+		font-size: 25px;  
+		text-align: center;
+	}
+
+	.mrt p {
+		font-size: 18px; 
+	}
+
+	.mrt h4 {
+		font-size: 20px;
+	}
+
+	.mrt h4:hover {
+		color: #000000;
+	}
+
+	.mrt {
+		background-color: #FA8072;
+	}
+
+	.mrt .container {
+		color: white;
+	}
+
+	.mrt-stn {
+		text-align: center;
+	}
+
+	.mrt-stn #mrt-map {
+		max-width: 100%;
+		height: 70%;
+		margin-top: 10px; 
+		margin-bottom: 10px;
+	}
+
+	.talk-to-us {
+		background-color: white;
+		height: 1000px;
+		max-width: 100%;
+		margin-top: 1%; 
+		margin-bottom: 1%;
+	}
+
+	.talk-to-us h1 {
+		font-size: 40px;
+	}
+
+	.talk-to-us p {
+		font-size: 20px;
+	}
+
+	.talk-to-us .container {
+		text-align: center;
+		margin-right: auto;
+		margin-left: auto;
+		color: black; 
+		max-width: 100%;
+	}
+
+	.talk-to-us form {
+		text-align: center;
+		margin-right: auto;
+		margin-left: auto;
+		max-width: 100%;
+		width: 90%;
+	}
+
+	</style>
+</head> 
+
+<body>
+
+	<a href="#" class="go-to-top">Go to top</a>
+	<script type="text/javascript">
+	$(function(){
+		$(".go-to-top").click(function(event){
+			event.preventDefault();
+			$("body, html").animate({"scrollTop": "0px"}, 800)
+		})
+	});
+	</script>
+
+<div id="home">
+	<div class="nav">
+		<div class="container">
+			<ul>
+				<li><a href="#home"> HOME </a> </li>
+				<li><a href="#about"> ABOUT </a> </li>
+				<li><a href="#location"> LOCATION </a> </li>
+				<li><a href="#map"> MAP </a> </li>
+				<li><a href="#talktous"> TALK TO US </a> </li>
+			</ul>
+		</div>
+	</div>
+
+</div>
+
+
+<div id="about">
+	<div class="about">
+		<div class="container">
+			<h1> About Us </h1>
+				<p> This is a website specially for cafe <em>lovers</em> and cafe <strong>hoppers</strong></p>
+				<p> You can easily navigate by clicking on the pictures below! </p>
+				<p> Search for cafes near you by simply clicking on the nearest MRT station on the map below! </p>
+				<p> OR searching through the list of cafes on the google map! :)</p>
+			<br>
+			<br>
+			<div class="col-md-4 .col-xs-12">
+				<div class="jm-item first">
+					<div class="jm-item-wrapper">
+						<div class="jm-item-image">
+							<img src="http://t0.gstatic.com/images?q=tbn:ANd9GcSCypY2yO4u4h-owiBYWlU1hcqRHR8yB7_D3246o_DfTd-9josd" alt="location"/>
+							<span class="jm-item-overlay"> </span>
+							<div class="jm-item-button"><a href="#location">LOCATION</a></div>
+						</div>
+						<div class="jm-item-title"> </div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4 .col-xs-12">
+				<div class="jm-item first">
+					<div class="jm-item-wrapper">
+						<div class="jm-item-image">
+							<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0UdS5xwuP0GEWyaKpvAi2FRfO5hNb2wKq5Etm9kHFybwbzbjzjQ" alt="location" />
+							<span class="jm-item-overlay"> </span>
+							<div class="jm-item-button"><a href="#map">MRT MAP</a></div>
+						</div>
+						<div class="jm-item-title">  </div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4 .col-xs-12">
+				<div class="jm-item first">
+					<div class="jm-item-wrapper">
+						<div class="jm-item-image">
+							<img src="http://t0.gstatic.com/images?q=tbn:ANd9GcSCypY2yO4u4h-owiBYWlU1hcqRHR8yB7_D3246o_DfTd-9josd" alt="location" />
+							<span class="jm-item-overlay"> </span>
+							<div class="jm-item-button"><a href="#talktous">TALK TO US</a></div>
+						</div>
+						<div class="jm-item-title">  </div>
+					</div>
+				</div>
+			</div>
+
+
+		</div>
+	</div>
+</div>
+
+<div id="google-map">
+	<div class="google-map">
+		<div class="container">
+			<h1> GOOGLE MAP </h1>
+			<p> Search for the cafe you wish to visit by selecting it from the list on the left! </p>
+
+			<iframe src="https://mapsengine.google.com/map/embed?mid=zhsaH86_NHcA.ksdbhSU02UDo" width="100%" height="800"></iframe>	
+
+		</div>
+	</div>
+</div>
+
+<div id="location"> 
+	<div class="location">
+		<div class ="container">
+
+			<h1>YOUR LOCATION</h1>
+			<p> If you have no idea where you are :P</p>
+			<p id="demo">Click the button to get your location:</p>
+
+			<div class="button">
+				<button onclick="getLocation()">You are here!</button>
+				<br>
+				<br>
+
+				<div style="width:100% ;height: 500px;border:1px solid #000;"> 
+
+					<div id="mapholder"></div>
+
+
+					<script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+
+					<script>
+					var x = document.getElementById("demo");
+					function getLocation() {
+						if (navigator.geolocation) {
+							navigator.geolocation.getCurrentPosition(showPosition,showError);
+						} else { 
+							x.innerHTML = "Geolocation is not supported by this browser.";}
+						}
+
+						function showPosition(position) {
+							lat = position.coords.latitude;
+							lon = position.coords.longitude;
+							latlon = new google.maps.LatLng(lat, lon)
+							mapholder = document.getElementById('mapholder')
+							mapholder.style.height='500px';
+							mapholder.style.width='100%';
+
+							var myOptions={
+								center:latlon,zoom:14,
+								mapTypeId:google.maps.MapTypeId.ROADMAP,
+								mapTypeControl:false,
+								navigationControlOptions:{style:google.maps.NavigationControlStyle.SMALL}
+							}
+
+							var map = new google.maps.Map(document.getElementById("mapholder"),myOptions);
+							var marker = new google.maps.Marker({position:latlon,map:map,title:"You are here!"});
+						}
+
+						function showError(error) {
+							switch(error.code) {
+								case error.PERMISSION_DENIED:
+								x.innerHTML = "You denied the request for Geolocation."
+								break;
+								case error.POSITION_UNAVAILABLE:
+								x.innerHTML = "Location information is unavailable."
+								break;
+								case error.TIMEOUT:
+								x.innerHTML = "The request to get your location timed out."
+								break;
+								case error.UNKNOWN_ERROR:
+								x.innerHTML = "An unknown error occurred :("
+									break;
+								}
+							}
+							</script>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div id="map">
+				<div class="map">
+					<div class="container">
+						<h1> MRT MAP </h1>
+						<p> Click on the MRT station to view the list of cafes near that station :D </p>
+						<p> * Best viewed fullscreen * </p>
+					</div>
+				</div>
+			</div>
+
+			<div class="mrt-stn">
+				<div class="container">
+					<img id="mrt-map" src="http://www.lta.gov.sg/content/dam/ltaweb/corp/PublicTransport/img/Train%20System%20Map.jpg" width="1140" height="924"  alt="mrt" usemap="#mrt"> </img> 
+					
+					<map name="mrt">
+						<area shape="rect" coords="553, 454, 630, 471" alt="ToaPayoh" href="#Toapayoh"> </area> 
+						<area shape="rect" coords="549, 479, 608, 496" alt="Novena" href="#Novena"> </area> 
+						<area shape="rect" coords="684, 630, 757, 646" alt="Bugis" href="#Bugis"> </area> 
+						<area shape="rect" coords="485, 595, 614, 610" alt="DhobyGaut" href="#DhobyGaut"> </area>
+						<area shape="rect" coords="711, 375, 762, 387" alt="Kovan" href="#Kovan"> </area>
+						<area shape="rect" coords="529, 396, 581, 420" alt="MaryMount" href="#MaryMount"> </area>
+						<area shape="rect" coords="725, 406, 829, 421" alt="Serangoon" href="#Serangoon"> </area>
+						<area shape="rect" coords="348, 506, 437, 522" alt="HollandV" href="#HollandV"> </area>
+
+						<area shape="rect" coords="590, 394, 658, 423" alt="Bishan" href="#Bishan"> </area> 
+						<area shape="rect" coords="660, 501, 734, 519" alt="BoonKeng" href="#BoonKeng"> </area> 
+						<area shape="rect" coords="629, 638, 682, 657" alt="BrasBasah" href="#BrasBasah"> </area> 
+						<area shape="rect" coords="359, 597, 451, 612" alt="CommonWealth" href="#CommonWealth"> </area>
+						<area shape="rect" coords="633, 530, 709, 545" alt="FarrerPark" href="#FarrerPark"> </area>
+						<area shape="rect" coords="893, 555, 937, 532" alt="Kembangan" href="#Kembangan"> </area>
+						<area shape="rect" coords="496, 530, 557, 546" alt="Orchard" href="#Orchard"> </area>
+
+					</map>
+				</div>
+			</div> 
+			
+			<div class="mrt"> 
+
+				<div id="Bishan">
+					<div class="Bishan">
+						<div class="container">
+							<h2> List of cafes in Bishan </h2>
+							<div class="col-md-4">
+								<h4> <strong> GRUB </strong>  </h4>
+								<p>	510, Ang Mo Kio Ave 1 (Bishan Park 1) </p>
+								<p>Singapore 569983</p>  
+								<p>Opening hours:</p>	
+								<p>Tues - Fri: 11am - 3pm, 5:30pm - 10:30pm </p>
+								<p>Sat - Sun: 9am - 4pm, 5:30pm - 10:30pm</p>
+								<a href="http://grub.com.sg">Website </a> </p>
+								<a href="https://www.facebook.com/grub.com.sg">Facebook page </a> </p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div id="BoonKeng">
+					<div class="BoonKeng">
+						<div class="container">
+							<h2> List of cafes in Boon Keng </h2>
+							<div class="col-md-4">
+								<h4> <strong> Bloomsbury Bakers </strong>  </h4>
+								<p>Blk 30 Bendemeer Road Singapore 330030 </p> 
+								<p>Opening hours:</p>	
+								<p>Tues - Fri: 12pm - 8pm</p>
+								<p>Sat - Sun: 10am - 8pm </p>
+								<a href="http://www.bloomsburybakers.com">Website </a> </p>
+								<a href="https://www.facebook.com/BloomsburyBakers/timeline">Facebook page </a> </p>
+							</div>
+
+							<div class="col-md-4">
+								<h4> <strong> The Backstage Cafe </strong>  </h4>
+								<p>158 Kallang Way, Performance Building </p>
+								<p>#01-06 Singapore 349245</p> 
+								<p>Opening hours:</p>	
+								<p>Mon - Sat: 11am - 9pm </p>
+								<p>Closed on Sun</p>
+								<a href="http://www.backstage-projects.com">Website </a> </p>
+								<a href="https://www.facebook.com/BackstagecafeSG">Facebook page </a> </p>
+							</div>
+
+						</div>
+					</div>
+				</div>
+
+
+				<div id="BrasBasah">
+					<div class="Brasbasah">
+						<div class="container">
+							<h2> List of cafes in Bras Basah </h2>
+							<div class="col-md-4">
+								<h4> <strong> Food For Thought </strong>  </h4>
+								<p>8 Queen Street, S188535 </p> 
+								<p>Opening hours:</p>	
+								<p>Tues - Fri: 10am - 9pm</p>
+								<p>Sat: 9am - 9pm </p>
+								<p>Sun: 9am - 6pm </p>
+								<a href="http://www.foodforthought.com.sg/index.php">Website </a> </p>
+								<a href="https://www.facebook.com/FFTsg">Facebook page </a> </p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+				<div id="Bugis">
+					<div class="Bugis">
+						<div class="container">
+							<h2> List of cafes in Bugis </h2>
+							<div class="col-md-4">
+								<h4> <strong> Eat Play Love </strong>  </h4>
+								<p>	28 Aliwal Street #01-07 Singapore 199918 <br> Aliwal Arts Center</p>  
+								<p>Opening hours:</p>	
+								<p>Mon - Sun : 12pm - 10pm </p>
+								<p>Kitchen closes 3pm to 6pm, except weekends & PH</p>
+								<p>Closed on Tuesdays</p>
+								<a href="http://www.eatplaylove.com.sg/">Website </a> </p>
+								<a href="https://www.facebook.com/eatplaylovealiwal">Facebook page </a> </p>
+							</div>
+
+							<div class="col-md-4">
+								<h4> <strong> A for Arbite </strong>  </h4>
+								<p>	28 Aliwal Street #01-01 Singapore 199928 <br> Aliwal Arts Center</p>  
+								<p>Opening hours:</p>	
+								<p>Tue - Fri : 11.30am - 3pm, 6pm - 10.30pm </p>
+								<p>Sat - Sun : 11am - 10.30pm </p>
+								<p>Last Order at 2.30pm & 9.30pm (Sun 9.00pm) </p>
+								<a href="http://www.arbite.com.sg/">Website </a> </p>
+								<a href="https://www.facebook.com/AForArbite">Facebook page </a> </p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div id="CommonWealth">
+					<div class="CommonWealth">
+						<div class="container">
+							<h2> List of cafes in Common Wealth </h2>
+							<div class="col-md-4">
+								<h4> <strong> 2 Loaves </strong>  </h4>
+								<p>846-3 Commonwealth Drive #01-388 </p>
+								<p>Singapore 140463 </p> 
+								<p>Opening hours:</p>	
+								<p>Tues - Sat: 10:30am - 8:30pm</p>
+								<p>Sun: 12:30pm - 8:30pm </p>
+								<a href="https://www.facebook.com/2loaves/timeline">Facebook page </a> </p>
+							</div>
+
+							<div class="col-md-4">
+								<h4> <strong> Shebrews Cafe </strong>  </h4>
+								<p>365 Commonwealth Avenue, Queenstown Community Center</p><p>Queenstown, Singapore 149732 </p> 
+								<p>Opening hours:</p>	
+								<p>Mon - Fri: 10:30am - 6pm</p>
+								<p>Sat - Sun: 11:30am - 7pm</p>
+								<a href="http://www.shebrews.org">Website </a> </p>
+								<a href="https://www.facebook.com/shebrewscafe/timeline">Facebook page </a> </p>
+							</div>
+
+						</div>
+					</div>
+				</div>
+
+				<div id="DhobyGaut">
+					<div class="dhobyg">
+						<div class="container">
+							<h2> List of cafes in Dhoby Gaut </h2>
+							<div class="col-md-4">
+								<h4> <strong> Kith Cafe </strong>  </h4>
+								<p>Park Mall </p>
+								<p>9 Penang Road #01-01E </p>  
+								<p>Opening hours:</p>	
+								<p>Tues - Sun : 8am - 10pm </p>
+								<p>Closed on Mondays</p>
+								<a href="http://kith.com.sg/">Website </a> </p>
+								<a href="https://www.facebook.com/pages/Kith-cafe/156467787740764">Facebook page </a> </p>
+							</div>
+
+							<div class="col-md-4">
+								<h4> <strong> Strictly Pancakes </strong>  </h4>
+								<p>44A Prinsep Street Singapore 188674 </p> 
+								<p>Opening hours:</p>	
+								<p>Mon: 6am - 10pm </p>
+								<p>Tues - Thurs: 11:30am - 10pm</p>
+								<p>Fri: 11:30am - 12am</p>
+								<p>Sat: 10am - 4pm, 6pm - 12am</p>
+								<p>Sun: 10am - 4pm, 6pm - 10pm</p>
+								<a href="http://strictlypancakes.com.sg">Website </a> </p>
+								<a href="https://www.facebook.com/pages/Strictly-Pancakes/144466005568330">Facebook page </a> </p>
+							</div>
+
+							<div class="col-md-4">
+								<h4> <strong> Createaf Waffles </strong>  </h4>
+								<p>The Cathay 2 Handy Road #01-02 </p>
+								<p>Singapore 229233</p> 
+								<p>Opening hours:</p>	
+								<p>Mon - Thu: 12:30pm - 10pm
+									<p>Fri - Sat: 12:30pm - 11:30pm</p>
+									<p>Sun: 12pm - 10pm</p>
+									<a href="https://www.facebook.com/createafwaffles">Facebook page </a> </p>
+								</div>
+
+
+							</div>
+						</div>
+					</div>
+
+					<div id="FarrerPark">
+						<div class="Farrerpark">
+							<div class="container">
+								<h2> List of cafes in Farrer Park </h2>
+								<div class="col-md-4">
+									<h4> <strong> The Little Prince Cafe </strong>  </h4>
+									<p>62 Somme Road #01-03 Singapore 207877</p>
+									<p>Opening hours:</p>	
+									<p>Tues - Sun : 11am - 10pm </p>
+									<p>Closed on Mondays</p>
+									<a href="http://littleprincecafe.wordpress.com">Website </a> </p>
+									<a href="https://www.facebook.com/LittlePrinceCafe">Facebook page </a> </p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div id="HollandV">
+						<div class="HollandV">
+							<div class="container">
+								<h2> List of cafes in Holland Village </h2>
+								<div class="col-md-4">
+									<h4> <strong> D'Good Cafe </strong>  </h4>
+									<p>273 Holland Avenue #02-01/02 </p>
+									<p>Singapore 278992 </p>
+									<p>Mon - Thurs: 10am - 10pm </p>
+									<p>Fri - Sat: 10am - 11pm </p>
+									<p>Sun: 10am - 10pm </p>
+									<a href="http://dgoodcafe.com/">Website </a> </p>
+									<a href="https://www.facebook.com/dgoodcafe">Facebook page </a> </p>
+								</div>
+								<div class="col-md-4">
+									<h4> <strong> Hatched </strong>  </h4>
+									<p>	267 Holland Avenue </p>  
+									<p>Opening hours:</p>	
+									<p>Tue - Sun: 9am - 11pm</p>
+									<p>Closed on Mondays </p>
+									<a href="http://www.hatched.sg">Website </a> </p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div id="Kembangan">
+						<div class="Kembangan">
+							<div class="container">
+								<h2> List of cafes in Kembangan </h2>
+								<div class="col-md-4">
+									<h4> <strong> Penny University </strong>  </h4>
+									<p>402 East Coast Road Singapore 428997</p>
+									<p>Opening hours:</p>	
+									<p>Tues - Thurs: 8:30am - 6pm </p>
+									<p>Fri - Sat: 8:30am - 12am </p>
+									<p>Sun: 8:30am - 9pm</p>
+									<a href="http://www.pennyuni.com">Website </a> </p>
+									<a href="https://www.facebook.com/pennyuniversitysg">Facebook page </a> </p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div id="Kovan">
+						<div class="Kovan">
+							<div class="container">
+								<h2> List of cafes in Kovan </h2>
+								<div class="col-md-4">
+									<h4> <strong> Lola's Cafe </strong>  </h4>
+									<p>	5 Simon Road Singapore 545893</p>  
+									<p>Opening hours:</p>	
+									<p>Tue - Thu: 10am - 11:30pm </p>
+									<p>Fri - Sat: 10am - 12am</p>
+									<p>Sun: 10am - 11pm</p>
+									<a href="http://lolascafe.com.sg/">Website </a> </p>
+									<a href="https://www.facebook.com/lolascafesg">Facebook page </a> </p>
+								</div>
+
+								<div class="col-md-4">
+									<h4> <strong> Ice Edge Cafe </strong>  </h4>
+									<p>2 Kovan Road Simon Plaza, #01-10 Singapore 548008</p>  
+									<p>Opening hours:</p>	
+									<p>Mon - Sun: 12pm - 12am </p>
+									<a href="http://www.iceedgecafe.com.sg/contact.php">Website </a> </p>
+									<a href="https://www.facebook.com/iceedgecafe">Facebook page </a> </p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div id="MaryMount"> 
+						<div class="Marymount">
+							<div class="container">
+								<h2> List of cafes in Mary Mount </h2> 
+								<div class="col-md-4">					
+									<h4> <strong>Little Pancakes</strong>  </h4>
+									<p>200 Upper Thomson Road #01-04 Thomson Imperial Court</p>  
+									<p>Opening hours:</p>	
+									<p>Mon: 1pm - 11pm </p>
+									<p>Wed - Fri: 1pm - 11pm </p>
+									<p>Sat: 11am - 11pm </p>
+									<p>Sun: 11am - 9pm</p>
+									<a href="http://www.littlepancakes.com.sg/">Website </a> </p>
+									<a href="https://www.facebook.com/littlepancakess">Facebook page </a> </p>
+								</div>
+
+								<div class="col-md-4">					
+									<h4> <strong>Salted Caramel Cafe</strong>  </h4>
+									<p>246F Upper Thomson Road Singapore 574370</p>  
+									<p>Opening hours:</p>	
+									<p>Sun - Thurs: 12pm - 11pm</p>
+									<p>Fri, Sat & Eve of PH: 12pm - 2am</p>
+									<a href="http://www.saltedcaramel.sg/">Website </a> </p>
+									<a href="https://www.facebook.com/SaltedCaramelIceCream">Facebook page </a> </p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div id="Novena">
+						<div class="Novena">
+							<div class="container">
+								<h2> List of cafes in Novena </h2>
+								<div class="col-md-4">
+									<h4> <strong> La Ristrettos </strong>  </h4>
+									<p>	10 Sinaran Drive #08-37 Novena Medical Centre Singapore 307506 </p>  
+									<p>Opening hours:</p>	
+									<p>Mon - Fri: 8am - 6pm</p>
+									<p>Sat: 8am - 2pm</p>
+									<p>Closed on Sundays </p>
+									<a href="https://www.facebook.com/LaRistrettos">Facebook page </a> </p>
+								</div>
+
+
+							</div>
+						</div>
+					</div>
+
+					<div id="Orchard">
+						<div class="Orchard">
+							<div class="container">
+								<h2> List of cafes in Orchard </h2>
+								<div class="col-md-4">
+									<h4> <strong> Marmalade Pantry </strong>  </h4>
+									<p>2 Orchard Turn #03-22 ION Orchard </p>  
+									<p>Opening hours:</p>	
+									<p>Mon - Sun: 10am - 10pm</p>
+									<a href="http://themarmaladepantry.com.sg/city/">Website</a> </p>
+									<a href="https://www.facebook.com/MarmaladePantry">Facebook page </a> </p>
+								</div>
+
+								<div class="col-md-4">
+									<h4> <strong> Antoinette </strong>  </h4>
+									<p>333A Orchard Road, Mandarin Gallery</p>  
+									<p>#02-33/34, Singapore 238897 </p>
+									<p>Opening hours:</p>	
+									<p>Mon - Sun: 11am - 10pm </p>
+									<p>Last order 9:30pm</p>
+									<a href="http://antoinette.com.sg">Website</a> </p>
+									<a href="https://www.facebook.com/Antoinette.sg">Facebook page </a> </p>
+								</div>
+
+							</div>
+						</div>
+					</div>
+
+
+					<div id="OutramPark">
+						<div class="Outrampark">
+							<div class="container">
+								<h2> List of cafes in Outram Park</h2>
+								<div class="col-md-4">
+									<h4> <strong> Waffle Slayer </strong>  </h4>
+									<p>37 Kampong Bahru Road, Singapore 169356</p>  
+									<p>Opening hours:</p>	
+									<p>Mon - Sun: 11am - 10pm</p>
+									<a href="https://www.facebook.com/WaffleSlayerSG/timeline">Facebook page </a> </p>
+								</div>
+
+								<div class="col-md-4">
+									<h4> <strong> Strangers' Reunion </strong>  </h4>
+									<p>33/35/37 Kampong Bahru Rd Singapore 169355</p>  
+									<p>Opening hours:</p>	
+									<p>Mon: 9am - 10pm</p>
+									<p>Wed - Thu: 9am - 10pm</p>
+									<p>Fri - Sat: 9am - 12am</p>
+									<p>Sun: 9am - 10pm</p>
+									<a href="https://www.facebook.com/StrangersReunion/timeline">Facebook page </a> </p>
+								</div>
+
+								<div class="col-md-4">
+									<h4> <strong> 49 Seats </strong>  </h4>
+									<p>49 Kreta Ayer Road Singapore 089007</p>  
+									<p>Opening hours:</p>	
+									<p>Mon - Thurs: 6pm - 2am</p>
+									<p>Fri - Sat: 6pm - 2am</p>
+									<a href="https://www.facebook.com/49Seats/timeline">Facebook page </a> </p>
+								</div>
+
+							</div>
+						</div>
+					</div>
+
+
+					<div id="Serangoon">
+						<div class="serangoon">
+							<div class="container">
+								<h2> List of cafes in Serangoon </h2>
+								<div class="col-md-4">
+									<h4> <strong> Wimbly Lu </strong>  </h4>
+									<p>15-2, Jalan Rilang
+										Singapore 358987</p>  
+										<p>Opening hours:</p>	
+										<p>Tues - Fri: 1pm - 10:30pm </p>
+										<p>Sat: 9am - 11pm </p>
+										<p>Sun: 9am - 10:30pm </p>
+										<a href="http://www.wimblylu.com/">Website </a> </p>
+										<a href="https://www.facebook.com/WimblyLuChocolates">Facebook page </a> </p>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div id="Somerset">
+							<div class="Somerset">
+								<div class="container">
+									<h2> List of cafes in Somerset </h2>
+									<div class="col-md-4">
+										<h4> <strong> Dean and Deluca </strong>  </h4>
+										<p>	181 Orchard Road #04-23/24 Orchard Central </p>  
+										<p>Opening hours:</p>	
+										<p>Mon - Sun: 11am - 10pm</p>
+										<a href="https://www.facebook.com/DeanDelucaSG">Facebook page </a> </p>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div id="Toapayoh"> 
+							<div class="tpy">
+								<div class="container">
+									<h2> List of cafes in ToaPayoh </h2> 
+									<div class="col-md-4">					
+										<h4> <strong>Creamier</strong>  </h4>
+										<p>	128 Toa Payoh Lorong 1 #01-835</p>  
+										<p>Opening hours:</p>	
+										<p>Tue - Thu: 12 pm - 10pm</p>
+										<p>Fri - Sat:	12pm - 11 pm</p>
+										<p>Sun:	12pm - 10pm </p>
+										<p>Closed on Mondays </p>
+										<a href="http://creamier.com.sg/">Website </a> </p>
+									</div>
+
+									<div class="col-md-4">					
+										<h4> <strong>The Dream Cafe</strong>  </h4>
+										<p>	163 Lorong 1 Toa Payoh #01-1016 S(310163)</p>  
+										<p>Opening hours:</p>	
+										<p>Mon - Sun: 1pm - 10:30pm</p>
+										<a href="http://www.thedreamcafe.sg/">Website </a> </p>
+										<a href="https://www.facebook.com/thedreamcafe">Facebook page </a> </p>
+									</div>
+
+									<div class="col-md-4">					
+										<h4> <strong>Wheeler's Yard</strong>  </h4>
+										<p>28 Lor Ampas Singapore 328781</p>  
+										<p>Opening hours:</p>	
+										<p>Tues - Thurs: 10:30am - 10pm</p>
+										<p>Fri - Sat: 10:30am - 11pm</p>
+										<p>Sun: 10:30am - 10pm </p>
+										<a href="https://www.facebook.com/wheelersyard">Facebook page </a> </p>
+									</div>
+								</div>
+							</div>
+						</div>
+
+
+
+					</div>
+				</div>
+
+
+				<div id="talktous">
+					<div class="talk-to-us">
+						<div class="container">
+							<h1>TALK TO US</h1>
+							<p> Feel free to share with us any cafe(s) you want to add! </p>
+
+							<!-- Begin Comments JavaScript Code -->
+							<script type="text/javascript" async>function ajaxpath_53b146fb9c655(url){return window.location.href == '' ? url : url.replace('&s=','&s=' + escape(window.location.href));}(function(){document.write('<div id="fcs_div"><a title="free comment script" href="http://www.freecommentscript.com">&nbsp;&nbsp;<b>Free HTML User Comments</b>...</a></div>');fcs_53b146fb9c655=document.createElement('script');fcs_53b146fb9c655.type="text/javascript";fcs_53b146fb9c655.src=ajaxpath_53b146fb9c655("http://www.freecommentscript.com/GetComments.php?p=53b146fb9c655&s=&Width=510&FontColor=1BA2C4&BackgroundColor=FFFFFF&FontSize=14&Size=10#!53b146fb9c655");setTimeout("document.getElementById('fcs_div').appendChild(fcs_53b146fb9c655)",1);})();</script><noscript><div><a href="http://www.freecommentscript.com" title="free html user comment box">Free Comment Script</a></div></noscript><!-- End Comments JavaScript Code -->
+
+							<h1>DONE BY </h1>
+							<p>2014 </p>
+							<p>Orbital </p>
+							<p>minewn </p>
+							<div class="col-md-6">
+								<div class="jm-item first">
+									<div class="jm-item-wrapper">
+										<div class="jm-item-image">
+
+											<img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcScG9D52xU6fmPKq-ZoHOl0WqQggJtM9wT5Z4KI1ljC2DMiR-9u" alt="pic" />
+											<span class="jm-item-overlay"> </span>
+											<div class="jm-item-button"><a href="#">HUIWEN</a></div>
+
+										</div>
+									</div>
+								</div>
+							</div>
+
+
+							<div class="col-md-4">
+								<div class="jm-item first">
+									<div class="jm-item-wrapper">
+										<div class="jm-item-image">
+
+											<img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcScG9D52xU6fmPKq-ZoHOl0WqQggJtM9wT5Z4KI1ljC2DMiR-9u" alt="pic" />
+											<span class="jm-item-overlay"> </span>
+											<div class="jm-item-button"><a href="#">HUIMIN</a></div>
+
+
+										</div>
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>			
+			</body>
+			</html> 
