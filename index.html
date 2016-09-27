@@ -5,294 +5,22 @@
 	<title> Cafe website </title>
 
 	<link href="http://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet" type="text/css"> </link>
-	<link href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/bootstrap.css" rel="stylesheet"> </link>
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script type="text/javascript" src="js/jquery-1.11.1.js"></script>
+	<script type="text/javascript" language="JavaScript" src="js/find5.js"></script>
 
-	<script type="text/javascript" src="js/jquery-1.11.1.js"> </script>
-	<script type="text/javascript" language="JavaScript" src="js/find5.js">	</script>
 	<script type="text/javascript"> 
 	$(document).ready(function(){
 		alert("Welcome to our website! Feel free to browse around :):)");
 	});
 	</script>
-
-	<style type="text/css">
-
-	body{
-		background-color: #FFFFFF;
-		font-family: 'Josefin Sans', Helvetica, Arial, sans-serif;
-		font-style: bold; 
-	}
-
-	.go-to-top {
-		position: fixed;
-		right: 0px;
-		bottom: 0px;
-		background-color: #ffffff;
-	}
-
-	.nav .container{
-		margin: 10px auto;
-		width: 100%;
-	}
-
-	.nav {
-		background-color: #63B8FF;
-		height: 100%;
-		width: 100%;
-	}
-
-	.nav a {
-		color: white;
-		font-size: 20px;
-		font-weight: bold;
-		padding: 10px;
-		text-transform: uppercase;
-		text-decoration: none;
-	}
-
-	.nav ul {
-		float: right;
-	}
-
-	.nav li {
-		display: inline; 
-	}
-
-	.nav a:hover {
-		color: #a1d4ff;
-	}
-
-	.about {
-		background-color: #FFFFFF;
-		margin-top: 10px;
-		margin-bottom: 50px;
-	}
-
-	.about h1 {
-		color: black;
-		font-size: 40px;  
-		font-weight: bold;
-		text-align: center;
-	}
-
-	.about p {
-		color: black;
-		font-size: 25px;  
-		text-align: center;
-	}
-
-	.jm-item {
-		padding: 10px;
-		display: inline-block;
-		text-align: left;
-	}
-	.jm-item-wrapper {
-		position: relative;
-		padding: 7px;
-		background: ;
-	}
-	.jm-item-image {
-		position: relative;
-		overflow: hidden;
-		
-	}
-	.jm-item-image img {
-		display: block;
-		
-	}
-	.jm-item-title {
-		position: absolute;
-		left: -10px;
-		bottom: 17px;
-		background:  ;
-		line-height: 1.5em;
-		font-weight: normal;
-		padding: 7px 9px 6px;
-		text-transform: uppercase;
-		font-family: 'Oswald', sans-serif;
-		color: #FFFFFF;
-		font-size: 1.4em;
-	}
-	.jm-item-overlay {
-		background: #000;
-		opacity: 0;
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		top: 0;
-		left: 0;
-		-webkit-transition: opacity 0.5s ease-in 0s;
-		-moz-transition: opacity 0.5s ease-in 0s;
-		-o-transition: opacity 0.5s ease-in 0s;
-		transition: opacity 0.5s ease-in 0s;
-	}
-	.jm-item-wrapper:hover .jm-item-overlay {
-		opacity: 0.3;
-	}
-	
-	.jm-item-button {
-		height: 50px;
-		width: 200px;
-		text-align: left;
-		position: absolute;
-		left: 20%;
-		
-	}
-	.jm-item-button a {
-		border-radius: 0%;
-		-webkit-border-radius: 50%;
-		background: ;
-		text-transform: uppercase;
-		
-		color: #FFFFFF;
-		font-size: 2em;
-		line-height: 50px;
-		-webkit-transition: all 0.2s ease-in 0s;
-		-moz-transition: all 0.2s ease-in 0s;
-		-o-transition: all 0.2s ease-in 0s;
-		transition: all 0.2s ease-in 0s;
-		text-decoration: none !important;
-		display: block;
-	}
-	.jm-item-button a:hover {
-		background: ;	
-	}
-	.first .jm-item-button {
-		-webkit-transition: all 0.3s ease-in 0.3s;
-		-moz-transition: all 0.3s ease-in 0.3s;
-		-o-transition: all 0.3s ease-in 0.3s;
-		transition: all 0.3s ease-in 0.3s;
-		top: -50px;	
-	}
-	.first .jm-item-wrapper:hover .jm-item-button {
-		top: 35%;	
-	}
-
-	.location {
-		background-color: #AB82FF;
-		height: 800px;
-		max-width: 100%;
-	}
-
-	.location h1 {
-		color: white;
-		font-size: 40px; 
-		text-align: center;
-	}
-
-	.location p {
-		color: white;
-		font-size: 25px;  
-		text-align: center;
-	}
-
-	.location .button{
-		color: black;
-		font-size: 15px;  
-		text-align: center;
-	}
-	.google-map {
-		background-color: #AB82FF;
-	}
-
-	.google-map h1 {
-		color: white;
-		font-size: 40px; 
-		text-align: center;
-	}
-
-	.google-map p {
-		color: white;
-		font-size: 25px;  
-		text-align: center;
-	}
-
-	.map {
-		background-color: #FFFFFF;
-		height: 150px; 
-	}
-
-	.map h1 {
-		color: black;
-		font-size: 40px; 
-		text-align: center;
-	}
-
-	.map p {
-		color: black;
-		font-size: 25px;  
-		text-align: center;
-	}
-
-	.mrt p {
-		font-size: 18px; 
-	}
-
-	.mrt h4 {
-		font-size: 20px;
-	}
-
-	.mrt h4:hover {
-		color: #000000;
-	}
-
-	.mrt {
-		background-color: #FA8072;
-	}
-
-	.mrt .container {
-		color: white;
-	}
-
-	.mrt-stn {
-		text-align: center;
-	}
-
-	.mrt-stn #mrt-map {
-		max-width: 100%;
-		height: 70%;
-		margin-top: 10px; 
-		margin-bottom: 10px;
-	}
-
-	.talk-to-us {
-		background-color: white;
-		height: 1000px;
-		max-width: 100%;
-		margin-top: 1%; 
-		margin-bottom: 1%;
-	}
-
-	.talk-to-us h1 {
-		font-size: 40px;
-	}
-
-	.talk-to-us p {
-		font-size: 20px;
-	}
-
-	.talk-to-us .container {
-		text-align: center;
-		margin-right: auto;
-		margin-left: auto;
-		color: black; 
-		max-width: 100%;
-	}
-
-	.talk-to-us form {
-		text-align: center;
-		margin-right: auto;
-		margin-left: auto;
-		max-width: 100%;
-		width: 90%;
-	}
-
-	</style>
 </head> 
 
 <body>
 
 	<a href="#" class="go-to-top">Go to top</a>
+
 	<script type="text/javascript">
 	$(function(){
 		$(".go-to-top").click(function(event){
@@ -358,7 +86,7 @@
 						<div class="jm-item-image">
 							<img src="http://t0.gstatic.com/images?q=tbn:ANd9GcSCypY2yO4u4h-owiBYWlU1hcqRHR8yB7_D3246o_DfTd-9josd" alt="location" />
 							<span class="jm-item-overlay"> </span>
-							<div class="jm-item-button"><a href="#talktous">TALK TO US</a></div>
+							<div class="jm-item-button"><a href="#map">TALK TO US</a></div>
 						</div>
 						<div class="jm-item-title">  </div>
 					</div>
@@ -374,8 +102,9 @@
 	<div class="google-map">
 		<div class="container">
 			<h1> GOOGLE MAP </h1>
-			<p> Search for the cafe you wish to visit by selecting it from the list on the left! </p>
+			<p> Search for the cafe you wish to visit by selecting it from the list! :D </p>
 
+			<!-- <div class="col-md-6 .col-xs-12">	-->
 			<iframe src="https://mapsengine.google.com/map/embed?mid=zhsaH86_NHcA.ksdbhSU02UDo" width="100%" height="800"></iframe>	
 
 		</div>
@@ -416,7 +145,7 @@
 							lon = position.coords.longitude;
 							latlon = new google.maps.LatLng(lat, lon)
 							mapholder = document.getElementById('mapholder')
-							mapholder.style.height='500px';
+							mapholder.style.height='350px';
 							mapholder.style.width='100%';
 
 							var myOptions={
@@ -457,14 +186,15 @@
 					<div class="container">
 						<h1> MRT MAP </h1>
 						<p> Click on the MRT station to view the list of cafes near that station :D </p>
-						<p> * Best viewed fullscreen * </p>
+						<p> * Best viewed fullscreen in Safari * </p>
 					</div>
 				</div>
 			</div>
 
 			<div class="mrt-stn">
 				<div class="container">
-					<img id="mrt-map" src="http://www.lta.gov.sg/content/dam/ltaweb/corp/PublicTransport/img/Train%20System%20Map.jpg" width="1140" height="924"  alt="mrt" usemap="#mrt"> </img> 
+					<img id="mrt-map" src="map.jpg" width="1140" height="924"  alt="mrt" usemap="#mrt"> </img> 
+					
 					
 					<map name="mrt">
 						<area shape="rect" coords="553, 454, 630, 471" alt="ToaPayoh" href="#Toapayoh"> </area> 
@@ -985,3 +715,4 @@
 				</div>			
 			</body>
 			</html> 
+
